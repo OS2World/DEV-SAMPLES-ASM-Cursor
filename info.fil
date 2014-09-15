@@ -1,0 +1,52 @@
+Magic number:             5a4d
+Bytes on last page:       0055
+Pages in file:            0002
+Relocations:              0000
+Paragraphs in header:     0004
+Extra paragraphs needed:  000a
+Extra paragraphs wanted:  ffff
+Initial stack location:   0000:00b8
+Word checksum:            0000
+Entry point:              0000:0000
+Relocation table address: 0040
+Reserved words:
+ 0000 0000 0000 0000 0000 0000 0000 0000
+ 0000 0000 0000 0000 0000 0000 0000 0000
+New .EXE header address:  00000080
+Memory needed:            1K
+
+Module:                   CURSOR
+Description:              CURSOR.EXE
+Operating system:         UNKNOWN
+Data:                     NONSHARED
+Initial CS:IP:            seg   1 offset 0000
+Initial SS:SP:            seg   2 offset 1060
+DGROUP:                   seg   2
+Linker version:           5.00
+32-bit Checksum:          4097303d
+Segment Table:            000000c0 length 0010 (16)
+Resource Table:           000000d0 length 0000 (0)
+Resident Names Table:     000000d0 length 000a (10)
+Module Reference Table:   000000da length 0008 (8)
+Imported Names Table:     000000e2 length 005c (92)
+Entry Table:              0000013e length 0002 (2)
+Non-resident Names Table: 00000140 length 000e (14)
+Movable entry points:     0
+Segment sector size:      16
+PROTMODE
+
+no. type address  file  mem   flags
+  1 CODE 00000150 0006f 00071 EXECUTEREAD, LOADONCALL, NONCONFORMING, NOIOPL,
+                              relocs, (fixed), (nondiscardable), (nonshared)
+  2 DATA 00000200 00055 01060 READWRITE, NONSHARED, LOADONCALL, NONCONFORMING,
+                              NOIOPL, (fixed), (nondiscardable)
+
+
+  1 type   offset target
+    PTR     006d  imp DOSCALLS.5
+    PTR     005e  imp KBDCALLS.KBDCHARIN
+    PTR     0018  imp DOSCALLS.49
+    PTR     001d  imp DOSCALLS.51
+    PTR     000e  imp VIOCALLS.VIOWRTTTY
+    PTR     004c  imp DOSCALLS.69
+    PTR     0037  imp OUTPUT.LARGE_CURSOR

@@ -1,0 +1,48 @@
+Magic number:             5a4d
+Bytes on last page:       013c
+Pages in file:            0001
+Relocations:              0000
+Paragraphs in header:     0004
+Extra paragraphs needed:  0000
+Extra paragraphs wanted:  ffff
+Initial stack location:   0000:00b8
+Word checksum:            0000
+Entry point:              0000:0000
+Relocation table address: 0040
+Reserved words:
+ 0000 0000 0000 0000 0000 0000 0000 0000
+ 0000 0000 0000 0000 0000 0000 0000 0000
+New .EXE header address:  00000080
+Memory needed:            1K
+
+Library:                  OUTPUT
+Description:              I/O FUNCTION
+Operating system:         UNKNOWN
+Data:                     SHARED
+Initialization:           Global
+Initial CS:IP:            seg   0 offset 0000
+Initial SS:SP:            seg   0 offset 0000
+DGROUP:                   seg   2
+Linker version:           5.00
+32-bit Checksum:          006efdd5
+Segment Table:            000000c0 length 0010 (16)
+Resource Table:           000000d0 length 0000 (0)
+Resident Names Table:     000000d0 length 0019 (25)
+Module Reference Table:   000000e9 length 0000 (0)
+Imported Names Table:     000000e9 length 0000 (0)
+Entry Table:              000000e9 length 000c (12)
+Non-resident Names Table: 000000f5 length 0010 (16)
+Movable entry points:     1
+Segment sector size:      16
+PROTMODE
+
+no. type address  file  mem   flags
+  1 CODE 00000110 00019 00019 EXECUTEREAD, LOADONCALL, NONCONFORMING, IOPL,
+                              (movable), (nondiscardable), (nonshared)
+  2 DATA 00000130 0000c 0000c READWRITE, SHARED, LOADONCALL, NONCONFORMING,
+                              NOIOPL, (fixed), (nondiscardable)
+
+
+Exports:
+ord seg offset name
+  1   1  0000  LARGE_CURSOR exported, shared data

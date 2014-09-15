@@ -1,0 +1,39 @@
+			CURSOR.ARC
+
+	This is a sample file illustrating the use of the MS MAKE utility
+to automate the production of EXE and their associated DLL files in the OS/2
+operating system.  In this case, the DLL does I/O, so  you have to add the
+following statement to your CONFIG.SYS file:
+
+			IOPL=YES
+
+	In order to run this program, you need OS/2, MASM 5.1, and a
+EGA/VGA hooked up to a color display.
+
+	The DLL will not be able to do its I/O unless you do.  The MS 
+MAKE utility in OS/2, unlike its Unix cousin, is bare of inference rules,
+and details count: lines w/blank lines between them are significant, lines 
+w/o blank lines between them are also, and those commas all mean something, 
+so you have to be careful of what you change or the file won't work.
+
+	The MAKE file also assumes that you are using MASM 5.1, and that
+you have properly set your enviremental variables and paths to the various
+files referenced.  Thus, where the MAKE file invokes a call to MASM or 
+DOSCALLS.LIB, these files have to be available to it, and I haven't put any
+paths into these commands.
+
+	All this program does is make the cursor larger, wait for a keystroke,
+and then exit back to OS/2 (notice that the size of the cursor gets restored
+by the OS).  If you run it through Codeview, you have to trace thru a bit to 
+get past the initialation routine that OS/2 loads in front of the symbolic
+information (use the /L switch to load the DLL): 
+
+        	CVP /L DOSCALLS.LIB /L OUTPUT.DLL CURSOR.EXE
+
+
+If you have any questions, you can contact me at Compuserve 72261,347.
+
+					Harve Schiffman
+					Upland, Cal.
+
+	

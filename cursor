@@ -1,0 +1,22 @@
+# usage = make /d /n [filename]
+
+%1=cursor
+%2=output
+
+$(%1).obj: $(%1).asm
+	masm /W2 /Mx /Zi $(%1).asm,$(%1);
+
+$(%2).obj: $(%2).asm
+	masm /W2 /Mx /Zi $(%2).asm,$(%2);
+
+$(%2).dll: $(%2).obj 
+	link /Al:16 /co $**,,,,$(%2).def;
+	implib $(%2).lib $(%2).def
+
+$(%1).exe: $(%1).obj 
+	link /Al:16 /co $**, $@,,doscalls.lib $(%2).lib,$(%1).def;
+	exehdr /v $(%1).exe > info.fil
+	exehdr /v $(%2).dll > info2.fil
+	copy $(%2).dll c:\os2
+	cvpack $(%1).exe
+	
